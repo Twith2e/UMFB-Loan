@@ -37,10 +37,10 @@ export default function LoanRequest() {
         <div className="col-12 w-full flex gap-2 items-center">
           <span className="whitespace-nowrap">Loan Purpose</span>
           <select
-            className="border p-2"
+            className="border p-2 outline-none"
             name="Loan Purpose"
             id=""
-            value={formData["Loan Purpose"]}
+            value={formData["Loan Purpose"] || ""}
             onChange={handleChange}
           >
             <option disabled value="">
@@ -76,10 +76,10 @@ export default function LoanRequest() {
               Who is currently or has/have had a loan with another FI?
             </span>
             <select
-              className="border p-2 w-full"
+              className="border p-2 w-full outline-none"
               name="FI Loan"
               id=""
-              value={formData["FI Loan"]}
+              value={formData["FI Loan"] || ""}
               onChange={handleChange}
             >
               <option disabled value="">
@@ -99,10 +99,10 @@ export default function LoanRequest() {
               How did you hear about UnilagMFB?
             </span>
             <select
-              className="border p-2 w-full"
+              className="border p-2 w-full outline-none"
               name="Discovered through"
               id=""
-              value={formData["Discovered through"]}
+              value={formData["Discovered through"] || ""}
               onChange={handleChange}
             >
               <option disabled value="">

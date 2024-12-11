@@ -27,10 +27,10 @@ export default function BusinessInfos() {
         <div className="col-12 flex gap-2 items-center">
           <span className="whitespace-nowrap">Business Type:</span>
           <select
-            className="border p-2 w-full"
+            className="border p-2 w-full outline-none"
             name="Business Type"
             id=""
-            value={formData["Business Type"]}
+            value={formData["Business Type"] || ""}
             onChange={handleChange}
           >
             <option disabled value="">

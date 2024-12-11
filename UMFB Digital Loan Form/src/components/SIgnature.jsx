@@ -71,13 +71,13 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
           <button
             onClick={handleImageClear} // Clear image when clicked
             className="bg-red-500 text-white p-2 rounded mt-2"
+            z
           >
             Remove Image
           </button>
         )}
 
-        {/* Conditionally Render Date Picker */}
-        {/* {isDate && (
+        {isDate && (
           <DatePicker
             selected={formData[name] || ""}
             onChange={(date) => updateField(name, date)} // Update date field in formData
@@ -86,7 +86,7 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
             name={name}
             dateFormat={"dd/MM/yyyy"}
           />
-        )} */}
+        )}
       </div>
     </div>
   );

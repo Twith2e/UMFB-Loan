@@ -27,6 +27,7 @@ export default function Required() {
     "Applicant State of Residence",
     "Applicant LGA of Residence",
     "Applicant Signature Date",
+    "Applicant Signature",
     "Applicant's Spouse's First Name",
     "Applicant's Spouse's Middle Name",
     "Applicant's Spouse's Last Name",

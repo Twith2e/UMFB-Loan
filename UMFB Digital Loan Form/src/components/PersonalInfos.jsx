@@ -69,7 +69,7 @@ export default function Personals() {
         <div className="col-3 flex gap-2 items-center">
           <span>Sex:</span>
           <select
-            className="border p-2"
+            className="border p-2 outline-none"
             name="Applicant Gender"
             id=""
             value={formData["Applicant Gender"] || ""}
@@ -209,13 +209,13 @@ export default function Personals() {
         <div className="col-3 flex gap-2 items-center">
           <span>Sex:</span>
           <select
-            className="border p-2"
+            className="border p-2 outline-none"
             name="Next of Kin Gender"
             id=""
-            value={formData["Next of Kin Gender"]}
+            value={formData["Next of Kin Gender"] || ""}
             onChange={handleChange}
           >
-            <option disabled value="">
+            <option className="text-gray-500" disabled value="">
               Select a gender
             </option>
             <option value="Female">Female</option>
