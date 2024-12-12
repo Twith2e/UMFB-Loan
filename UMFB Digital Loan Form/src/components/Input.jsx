@@ -5,11 +5,9 @@ export default function Input({ label, name, type, placeholder }) {
   const { formData, updateField } = useForm();
 
   const handleDateChange = (e) => {
-    const dateString = e.target.value; // Get the raw input value (yyyy-MM-dd)
+    const dateString = e.target.value;
     if (dateString) {
-      // Parse it into a Date object
       const date = parse(dateString, "yyyy-MM-dd", new Date());
-      // Format the date to dd/MM/yyyy
       const formattedDate = format(date, "dd/MM/yyyy");
       updateField(name, formattedDate);
     } else {
@@ -37,7 +35,7 @@ export default function Input({ label, name, type, placeholder }) {
           type === "number"
             ? (e) => {
                 if (["e", "E", "+", "-"].includes(e.key)) {
-                  e.preventDefault(); // Block these keys
+                  e.preventDefault();
                 }
               }
             : undefined
