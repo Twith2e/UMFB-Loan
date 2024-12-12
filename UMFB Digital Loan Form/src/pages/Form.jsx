@@ -10,20 +10,22 @@ import SubmitButton from "../components/SubmitButton";
 export default function Form() {
   return (
     <div className="container-fluid">
-      <div className="row p-12">
-        <div className="col-lg-12">
+      <div className="row p-2 p-md-5">
+        <div className="col-lg-12 d-flex flex-column gap-3">
           <NavBar />
           <div className="text-center">
             <h3>BUSINESS LOAN APPLICATION FORM</h3>
           </div>
-          <div className="flex gap-3">
-            <CheckBox text="New Client" name="New Client" />
-            <CheckBox text="Recurrent Client" name="Recurrent Client" />
+          <div className="flex flex-col md:flex-row md:justify-between gap-3">
+            <div className="flex gap-4">
+              <CheckBox text="New Client" name="New Client" />
+              <CheckBox text="Recurrent Client" name="Recurrent Client" />
+            </div>
             <div className="flex gap-2">
               <span>Client ID No</span>
               <input
                 className="border-b border-b-black outline-none"
-                type="number"
+                type="text"
                 name="Client ID Number"
                 id=""
               />
@@ -43,12 +45,12 @@ export default function Form() {
           </div>
           <div className="mt-4 flex justify-end">
             <Signature
-              imgName="Applicant Signature"
-              name="Applicant Signature Date"
+              imgName="Applicant's Signature"
+              name="Applicant's Signature Date"
               label="Upload Signature"
             />
           </div>
-          <div className="mt-12 text-center">
+          <div className="my-12 text-center">
             <SubmitButton />
           </div>
         </div>

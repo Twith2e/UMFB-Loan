@@ -63,24 +63,24 @@ export default function BusinessInfos() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-4">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-4">
           <Input
             label="Location Since"
-            name="Current Location Period"
+            name="Location Since"
             type="date"
             placeholder="Since when have you been at current location?"
           />
         </div>
-        <div className="col-4">
+        <div className="col-12 col-lg-4">
           <Input
             label="Business Since"
-            name="Current Business Period"
+            name="Business Since"
             type="date"
             placeholder="Since when have you been in this business?"
           />
         </div>
-        <div className="col-4">
+        <div className="col-12 col-lg-4">
           <Input
             label="TIN Number"
             name="Business TIN Number"

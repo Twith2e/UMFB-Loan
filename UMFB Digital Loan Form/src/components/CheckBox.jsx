@@ -9,8 +9,8 @@ export default function CheckBox({ text, name }) {
         className="w-6 h-6"
         type="checkbox"
         name={name}
-        checked={formData["client-status"] === text}
-        onChange={() => updateField("client-status", text)}
+        checked={formData["Client Status"] === text}
+        onChange={() => updateField("Client Status", text)}
         id="check"
       />
     </div>

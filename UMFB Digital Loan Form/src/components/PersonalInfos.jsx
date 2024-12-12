@@ -14,8 +14,8 @@ export default function Personals() {
       <div className="bg-red-900 text-white">
         <h2>PERSONAL INFORMATION</h2>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row lg-d-flex flex-lg-row gap-lg-0 gap-3">
+        <div className="col-12 col-lg-6">
           <Input
             label={"First Name (Applicant)"}
             name="Applicant First Name"
@@ -23,7 +23,7 @@ export default function Personals() {
             placeholder="First Name"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label={"Middle Name"}
             name="Applicant Middle Name"
@@ -32,8 +32,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex-lg-row gap-lg-0 gap-3 align-item-center">
+        <div className="col-12 col-lg-6">
           <Input
             label="Last Name"
             name="Applicant Last Name"
@@ -41,7 +41,7 @@ export default function Personals() {
             placeholder="Last Name"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Date of Birth"
             name="Applicant Date of Birth"
@@ -49,8 +49,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-3">
+      <div className="row d-flex flex-column gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-4">
           <Input
             label="Type of ID"
             name="Applicant ID Type"
@@ -58,7 +58,7 @@ export default function Personals() {
             placeholder="ID Type"
           />
         </div>
-        <div className="col-3">
+        <div className="col-12 col-lg-4">
           <Input
             label="ID Number"
             name="Applicant ID Number"
@@ -66,10 +66,10 @@ export default function Personals() {
             placeholder="ID Number"
           />
         </div>
-        <div className="col-3 flex gap-2 items-center">
+        <div className="col-12 col-lg-4 flex gap-2 items-center">
           <span>Sex:</span>
           <select
-            className="border p-2 outline-none"
+            className="border p-2 outline-none w-full"
             name="Applicant Gender"
             id=""
             value={formData["Applicant Gender"] || ""}
@@ -83,8 +83,8 @@ export default function Personals() {
           </select>
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row d-flex flex-column flex-lg-row gap-lg-0 gap-3">
+        <div className="col-12 col-lg-6">
           <Input
             label="BVN"
             name="Applicant BVN"
@@ -92,7 +92,7 @@ export default function Personals() {
             placeholder="BVN"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Nationality (non-Nigerians only)"
             name="Applicant Nationality"
@@ -101,8 +101,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-6">
           <Input
             label="Telephone Number 1"
             name="Applicant First Telephone Number"
@@ -110,7 +110,7 @@ export default function Personals() {
             placeholder="Telephone Number 1"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Telephone Number 2"
             name="Applicant Second Telephone Number"
@@ -119,11 +119,11 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-3 flex gap-2 items-center">
-          <span>Marital Status:</span>
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 flex gap-2 items-center">
+          <span className="whitespace-nowrap">Marital Status:</span>
           <select
-            className="border p-2"
+            className="border p-2 w-full outline-none"
             name="Applicant Marital Status"
             id=""
             value={formData["Applicant Marital Status"] || ""}
@@ -143,8 +143,8 @@ export default function Personals() {
         stateName="Applicant State of Residence"
         LGAName="Applicant LGA of Residence"
       />
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-6">
           <Input
             label="First Name (Spouse)"
             name="Applicant's Spouse's First Name"
@@ -152,7 +152,7 @@ export default function Personals() {
             placeholder="First Name (Spouse)"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Middle Name (Spouse)"
             name="Applicant's Spouse's Middle Name"
@@ -161,8 +161,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-6">
           <Input
             label="Last Name (Spouse)"
             name="Applicant's Spouse's Last Name"
@@ -170,7 +170,7 @@ export default function Personals() {
             placeholder="Last Name (Spouse)"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Date of Birth (Spouse)"
             name="Applicant's Spouse's Date of Birth"
@@ -179,8 +179,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-6">
           <Input
             label="Telephone Number 1"
             name="Applicant's Spouse's First Telephone Number"
@@ -188,7 +188,7 @@ export default function Personals() {
             placeholder="Telephone Number 1"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Telephone Number 2"
             name="Applicant's Spouse's Second Telephone Number"
@@ -197,8 +197,8 @@ export default function Personals() {
           />
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-7">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-8">
           <Input
             label="Name of Next of Kin"
             name="Next of Kin's Name"
@@ -206,10 +206,10 @@ export default function Personals() {
             placeholder="Name of Next of Kin"
           />
         </div>
-        <div className="col-3 flex gap-2 items-center">
+        <div className="col-12 flex gap-2 items-center col-lg-4">
           <span>Sex:</span>
           <select
-            className="border p-2 outline-none"
+            className="border p-2 outline-none w-full"
             name="Next of Kin Gender"
             id=""
             value={formData["Next of Kin Gender"] || ""}
@@ -223,8 +223,8 @@ export default function Personals() {
           </select>
         </div>
       </div>
-      <div className="row flex justify-between">
-        <div className="col-5">
+      <div className="row flex flex-col gap-3 flex-lg-row gap-lg-0">
+        <div className="col-12 col-lg-6">
           <Input
             label="Relationship"
             name="Next of Kin's Relationship with Applicant"
@@ -232,7 +232,7 @@ export default function Personals() {
             placeholder="Next of Kin's Relationship with Applicant"
           />
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-6">
           <Input
             label="Telephone Number"
             name="Next of Kin's Telephone Number"

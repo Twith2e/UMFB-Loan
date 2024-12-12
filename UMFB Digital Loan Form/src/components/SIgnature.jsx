@@ -2,6 +2,7 @@ import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "./FormContext";
+import { format, parse } from "date-fns";
 
 function Signature({ name, imgName, isDate = true, label, required = true }) {
   const {
@@ -10,7 +11,14 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
     handleImageUpload,
     retainImage,
     imagePreview,
+    setImageData,
   } = useForm();
+
+  const handleDateChange = (date) => {
+    // Format the date to 'dd/MM/yyyy' before saving it as a string
+    const formattedDate = date ? format(date, "dd/MM/yyyy") : "";
+    updateField(name, formattedDate); // Update formData with the formatted date string
+  };
 
   const handleImageChange = (e) => {
     handleImageUpload(e, imgName); // Upload image to context
@@ -18,7 +26,8 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        retainImage(`${imgName}-preview`, reader.result); // Persist preview in formData
+        retainImage(`${imgName}-preview`, reader.result);
+        updateField(`${imgName}`, "true"); // Persist preview in formData
       };
       reader.readAsDataURL(file);
     }
@@ -26,7 +35,9 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
 
   const handleImageClear = () => {
     retainImage(`${imgName}-preview`, null); // Clear preview from formData
-    updateField(imgName, null);
+    setImageData((prevData) =>
+      prevData.filter((image) => image.name !== imgName)
+    );
   };
 
   return (
@@ -79,8 +90,12 @@ function Signature({ name, imgName, isDate = true, label, required = true }) {
 
         {isDate && (
           <DatePicker
-            selected={formData[name] || ""}
-            onChange={(date) => updateField(name, date)} // Update date field in formData
+            selected={
+              formData[name] && formData[name] !== ""
+                ? parse(formData[name], "dd/MM/yyyy", new Date())
+                : null
+            }
+            onChange={handleDateChange} // Update date field in formData
             className="border border-gray-300 p-2 rounded-lg shadow-sm mt-4 focus:outline-none focus:ring-2 focus:ring-blue-200"
             placeholderText="Select a date"
             name={name}

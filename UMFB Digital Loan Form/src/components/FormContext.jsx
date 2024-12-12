@@ -144,6 +144,7 @@ export const FormProvider = ({ children }) => {
         LGA,
         errors,
         setCount,
+        setImageData,
         signatoryCount,
       }}
     >

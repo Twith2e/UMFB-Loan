@@ -35,7 +35,7 @@ export default function DropDown({ stateName, LGAName }) {
 
   return (
     <div className="row flex justify-between">
-      <div className="flex col-5 gap-2 items-center">
+      <div className="flex col-6 gap-2 items-center">
         <label
           htmlFor="stateSelect"
           className="font-bold text-sm whitespace-nowrap"
@@ -47,7 +47,7 @@ export default function DropDown({ stateName, LGAName }) {
           onChange={handleStateChange}
           value={formData[stateName] || ""}
           name={stateName}
-          className="block w-full py-2 pl-3 pr-10 text-base border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-red-900"
+          className="block w-full py-2 pl-3 pr-10 text-base border border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:ring-red-900"
         >
           <option value="" disabled>
             Select a state
@@ -60,7 +60,7 @@ export default function DropDown({ stateName, LGAName }) {
         </select>
       </div>
 
-      <div className="flex items-center gap-2 col-5">
+      <div className="flex items-center gap-2 col-6">
         <label
           htmlFor="LGASelect"
           className="font-bold text-sm whitespace-nowrap"
@@ -71,7 +71,7 @@ export default function DropDown({ stateName, LGAName }) {
           id="LGASelect"
           onChange={handleLGAChange}
           value={formData[LGAName] || ""}
-          className="block w-full py-2 pl-3 pr-10 text-base border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-red-900"
+          className="block w-full py-2 pl-3 pr-10 text-base border border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:ring-red-900"
         >
           <option value="" disabled>
             Select an LGA

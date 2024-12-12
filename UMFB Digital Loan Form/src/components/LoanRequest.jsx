@@ -72,22 +72,25 @@ export default function LoanRequest() {
       <div className="row">
         <div className="col-12">
           <div className="col-12 flex gap-2 items-center">
-            <span className="whitespace-nowrap">
+            <span className="md:whitespace-nowrap">
               Who is currently or has/have had a loan with another FI?
             </span>
             <select
               className="border p-2 w-full outline-none"
-              name="FI Loan"
+              name="Do/did you/your spouse have a loan with another FI"
               id=""
-              value={formData["FI Loan"] || ""}
+              value={
+                formData[
+                  "Do/did you/your spouse have a loan with another FI"
+                ] || ""
+              }
               onChange={handleChange}
             >
               <option disabled value="">
                 Pick an applicable option
               </option>
-              <option value="You">You</option>
-              <option value="Spouse">Spouse</option>
-              <option value="Neither">Neither</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </div>
         </div>
@@ -100,9 +103,9 @@ export default function LoanRequest() {
             </span>
             <select
               className="border p-2 w-full outline-none"
-              name="Discovered through"
+              name="Discovered UnilagMFB through"
               id=""
-              value={formData["Discovered through"] || ""}
+              value={formData["Discovered UnilagMFB through"] || ""}
               onChange={handleChange}
             >
               <option disabled value="">

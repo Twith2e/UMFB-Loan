@@ -94,7 +94,7 @@ const sendEmail = async (req, res) => {
     // Email options
     const mailOptions = {
       from: process.env.EMAIL,
-      to: ["temiladeabdulbasit2002@gmail.com", "muritalaabimbola@gmail.com"],
+      to: ["temiladeabdulbasit2002@gmail.com", "amuritala@unilagmfbank.com"],
       subject: "Form Data Submission",
       text: "Please find the attached PDF and uploaded images.",
       attachments: [
