@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function SubmitButton() {
-  const { formData, imageData, validateForm } = useForm();
+  const { formData, imageData, validateFormF } = useForm();
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
 
